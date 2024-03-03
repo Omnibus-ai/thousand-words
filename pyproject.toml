@@ -1,0 +1,17 @@
+[project]
+name = "example_package_YOUR_USERNAME_HERE"
+version = "0.0.1"
+authors = [
+  { name="Omnibus-ai" },
+]
+description = "A program for converting text to image pixels."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+[project.urls]
+Homepage = "https://github.com/Omnibus-ai/thousand-words"
+Issues = "https://github.com/Omnibus-ai/thousand-words/issues"
