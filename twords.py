@@ -78,9 +78,7 @@ class Twords:
             out_list.append(sort_list)
         #print(out_list)
         img=self.create_image(out_list)
-        word_box=out_list
-        rev_box=out_list
-        return img, img
+        return img
         
     def decode_im(self,img):
         pixels = img.load() # create the pixel map
