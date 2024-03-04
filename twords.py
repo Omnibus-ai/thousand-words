@@ -5,7 +5,7 @@ class Twords:
         self.char_dict={}
         self.rev_dict={}
         for i in range(256):
-            print (chr(i))
+            #print (chr(i))
             self.char_dict[chr(i)]=i
             self.rev_dict[i]=chr(i)
         self.char_keys=list(self.char_dict.keys())
@@ -13,17 +13,16 @@ class Twords:
     
     def create_image(self,inp):
         in_len=len(inp)
-        print(in_len)
+        print(f'Input string length:: {in_len}')
         dim=(math.sqrt(in_len))
-        print(dim)
+        #print(dim)
         int_dim=math.ceil(dim)
-        print(int_dim)
         img = Image.new(mode = "RGB", size = (int_dim, int_dim),
                                    color = (144, 144, 144))    
         pixels = img.load()
         im_width=img.size[0]
         im_height=img.size[1]
-        print(f'{im_width} :: {im_height}')
+        print(f'Image Size w:{im_width} x h:{im_height}')
         pixel_box=[]
         pixel_list={}
         cnt =0
@@ -74,17 +73,18 @@ class Twords:
             if len(sort_list)==2:
                 sort_list.append(144)
             if len(sort_list)==3:
-                print(f"Max Len:: {sort_list}")
+                #print(f"Max Len:: {sort_list}")
             out_list.append(sort_list)
         #print(out_list)
         img=self.create_image(out_list)
         return img
         
-    def decode_im(self,img):
+    def decode_im(self,im):
+        img=Image.open(im)
         pixels = img.load() # create the pixel map
         im_width=img.size[0]
         im_height=img.size[1]
-        print(f'{im_width} :: {im_height}')
+        print(f'Image Size w:{im_width} x h:{im_height}')
         cnt =0
         go=True
         out_string=""
