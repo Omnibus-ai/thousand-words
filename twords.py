@@ -72,8 +72,8 @@ class Twords:
                 sort_list.append(144)
             if len(sort_list)==2:
                 sort_list.append(144)
-            if len(sort_list)==3:
-                #print(f"Max Len:: {sort_list}")
+            #if len(sort_list)==3:
+            #    print(f"Max Len:: {sort_list}")
             out_list.append(sort_list)
         #print(out_list)
         img=self.create_image(out_list)
